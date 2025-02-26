@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbenmoha <hbenmoha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hamza_hat <hamza_hat@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 10:42:29 by hbenmoha          #+#    #+#             */
-/*   Updated: 2025/02/26 15:29:13 by hbenmoha         ###   ########.fr       */
+/*   Updated: 2025/02/26 21:20:16 by hamza_hat        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ static int	ft_isdigit(char *str)
 				str++;
 			key = 1;
 			if (!(*str >= '0' && *str <= '9'))
+				return (-1);
+			if (*(str + 1) == '-' || *(str + 1) == '+')
 				return (-1);
 		}
 		str++;
